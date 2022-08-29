@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon Wikipedia</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+</head>
+
+<body>
+    <div id="base">
+        <div id="menu">
+            <button name="Wiki" class="menu-item button-text" id="menu-wiki">Wikipedia</button>
+            <button name="Battle" class="menu-item button-text" id="menu-battle">Battle</button>
+            <button name="Bingo" class="menu-item button-text" id="menu-bingo">Bingo</button>
+            <button name="Quit" class="menu-item button-image" id="menu-quit"></button>
+            <button name="Minimize" class="menu-item button-image" id="menu-minimize"></button>
+            <button name="Show" class="menu-item button-image" id="menu-show"></button>
+        </div>
+        <div id="wiki">
+            <div class="pokecard">
+                <p class="name">Charmander</p>
+                <p class="id">(#004)</p>
+                <!-- Line through the ID number -->
+                <hr class="top-line">
+                <img src="../assets/Charmander.png" class="pokemon" />
+                <!-- Lines through the Swap Icon -->
+                <hr class="bottom-line-1">
+                <hr class="bottom-line-2">
+                <hr class="bottom-line-3">
+                <div class="bottom-circle"></div>
+                <div class="bottom-background"></div>
+                <button name="Swap" class="swap"></button>
+            </div>
+            <div class="types">
+                <p>Types: Fire</p>
+                <br>
+                <p>Weaknesses (200%)</p>
+                <p>→ Ground, Rock, Water</p>
+                <br>
+                <p>Resistances (50%)</p>
+                <p>→ Bug, Fairy, Fire, Grass, Ice, Steel</p>
+                <br>
+                <p>Immunities (0%)</p>
+                <p>→ None</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- <h1>Hello World!</h1>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.
+
+    You can also require other files to run in this process
+    <script src="./renderer.js"></script> -->
+</body>
+
+</html>

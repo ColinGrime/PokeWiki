@@ -1,0 +1,19 @@
+{
+    "name": "poke-wiki",
+    "version": "1.0.0",
+    "description": "Interactive wikipedia page for Pokémon",
+    "main": "main.js",
+    "author": "ColinGrime",
+    "scripts": {
+        "start": "electron ."
+    },
+    "dependencies": {
+        "@electron/remote": "^2.0.8",
+        "jquery": "^3.6.1",
+        "pokemon": "^2.3.3"
+    },
+    "devDependencies": {
+        "electron": "^20.0.3",
+        "electron-packager": "^16.0.0"
+    }
+}

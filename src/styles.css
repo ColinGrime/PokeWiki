@@ -1,0 +1,205 @@
+@font-face {
+  font-family: "Minecraftia";
+  src: url("../assets/Minecraftia.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Minecraftia";
+  font-size: 14px;
+  color: #c8d1d9;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#base {
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 10px;
+  background-color: #0e1117;
+}
+
+#menu {
+  background: #1f2329;
+  -webkit-app-region: drag;
+  height: 35px;
+  width: 100%;
+}
+
+.menu-item {
+  border: none;
+  background: none;
+}
+
+.button-text {
+  font-size: 16px;
+  float: left;
+  padding: 5px 15px;
+  color: rgba(240, 246, 251, 0.95);
+}
+
+.button-text:hover {
+  background: rgba(22, 27, 34, 0.5);
+}
+
+.button-image {
+  float: right;
+  -webkit-transition: background-image 0.1s ease-in-out;
+  transition: background-image 0.1s ease-in-out;
+  background: transparent;
+  background-size: cover;
+  height: 25px;
+  width: 25px;
+  margin: 5px;
+  margin-left: 0;
+  border: none;
+  -webkit-filter: drop-shadow(1px 1px black);
+          filter: drop-shadow(1px 1px black);
+}
+
+#menu-show {
+  background-image: url("../assets/Show_1.png");
+}
+
+#menu-show:hover {
+  background-image: url("../assets/Show_2.png");
+}
+
+#menu-minimize {
+  background-image: url("../assets/Minimize_1.png");
+}
+
+#menu-minimize:hover {
+  background-image: url("../assets/Minimize_2.png");
+}
+
+#menu-quit {
+  background-image: url("../assets/Quit_1.png");
+}
+
+#menu-quit:hover {
+  background-image: url("../assets/Quit_2.png");
+}
+
+#wiki {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+}
+
+.pokecard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 4px solid #1f2329;
+  border-radius: 15px;
+  height: 300px;
+  width: 200px;
+  z-index: 0;
+}
+
+.pokecard .name {
+  margin: 4px;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+.pokecard .id {
+  margin: 10px;
+  margin-top: 0;
+  background-color: #0e1117;
+}
+
+.pokecard .top-line {
+  position: relative;
+  bottom: 21px;
+  border: 1px solid #1f2329;
+  height: 1px;
+  width: 192px;
+  z-index: -1;
+}
+
+.pokecard .pokemon {
+  height: 170px;
+  width: 170px;
+  -webkit-filter: drop-shadow(1px 1px black);
+          filter: drop-shadow(1px 1px black);
+}
+
+.pokecard .bottom-line-1 {
+  position: relative;
+  top: 23.5px;
+  border: 1.5px solid #1f2329;
+  height: 1px;
+  width: 192px;
+}
+
+.pokecard .bottom-line-2 {
+  position: relative;
+  top: 29.5px;
+  border: 1.5px solid #1f2329;
+  height: 1px;
+  width: 192px;
+}
+
+.pokecard .bottom-line-3 {
+  position: relative;
+  top: 20px;
+  border: 3.5px solid #0e1117;
+  height: 1px;
+  width: 192px;
+  z-index: 1;
+}
+
+.pokecard .bottom-circle {
+  position: absolute;
+  top: 286px;
+  border-radius: 50%;
+  border: 3.5px solid #1f2329;
+  height: 52px;
+  width: 52px;
+}
+
+.pokecard .bottom-background {
+  position: absolute;
+  top: 289px;
+  border-radius: 50%;
+  background-color: #0e1117;
+  height: 46px;
+  width: 46px;
+}
+
+.pokecard .swap {
+  background: transparent;
+  background-image: url("../assets/Swap.svg");
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  background-size: cover;
+  border: none;
+  height: 30px;
+  width: 30px;
+  margin-top: 1px;
+  z-index: 2;
+}
+
+.types {
+  padding: 10px;
+}
+/*# sourceMappingURL=styles.css.map */
