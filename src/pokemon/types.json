@@ -1,9 +1,11 @@
 {
     "Types": "#fca801",
     "Weaknesses": "#ff5555",
+    "400%": "#ff5555",
     "200%": "#ff5555",
     "Resistances": "#55ff54",
     "50%": "#55ff54",
+    "25%": "#55ff54",
     "Immunities": "#55ffff",
     "None": "#555555",
     "Bug": "#93bb39",
