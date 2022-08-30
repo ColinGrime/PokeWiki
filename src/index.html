@@ -43,16 +43,23 @@
 
             <!-- Displays type information about the specified Pokémon -->
             <div class="types">
-                <p>Types: Fire</p>
+                <img src="../assets/Element.png" class="pic-to-left">
+                <p class="pic-to-left"> Types:</p>
+                <p class="tab">→ Fire</p>
                 <br>
-                <p>Weaknesses (200%)</p>
-                <p>→ Ground, Rock, Water</p>
+                <img src="../assets/Swords.png" class="pic-to-left">
+                <p class="pic-to-left">Weaknesses:</p>
+                <p class="tab">→ (400%): None</p>
+                <p class="tab">→ (200%): Ground, Rock, Water</p>
                 <br>
-                <p>Resistances (50%)</p>
-                <p>→ Bug, Fairy, Fire, Grass, Ice, Steel</p>
+                <img src="../assets/Shield.png" class="pic-to-left">
+                <p class="pic-to-left">Resistances:</p>
+                <p class="tab">→ (50%): Bug, Fairy, Fire, Grass, Ice, Steel</p>
+                <p class="tab">→ (25%): None</p>
                 <br>
-                <p>Immunities (0%)</p>
-                <p>→ None</p>
+                <img src="../assets/Immunity.png" class="pic-to-left">
+                <p class="pic-to-left">Immunities:</p>
+                <p class="tab">→ (0%): None</p>
             </div>
 
             <!-- Allows you to search for other Pokémon in the wikipedia -->
@@ -65,43 +72,100 @@
                 </div>
             </div>
 
-            <div class="break"></div>
+            <div class="separate"></div>
 
             <!-- Base stats of the Pokémon -->
             <div class="base-stats">
-                <p class="stat hp">HP: <span class="right">39</span></p>
-                <p class="stat attack">Attack: <span class="right">52</span></p>
-                <p class="stat special-attack">Sp. Atk: <span class="right">43</span></p>
-                <p class="stat defense">Defense: <span class="right">60</span></p>
-                <p class="stat special-defense">Sp. Def: <span class="right">50</span></p>
-                <p class="stat speed">Speed: <span class="right">65</span></p>
-                <p class="stat total">Total: <span class="right">309</span></p>
+                <div class="stats">
+                    <p class="stat hp">HP: <span class="right">39</span></p>
+                    <p class="stat attack">Attack: <span class="right">52</span></p>
+                    <s>
+                        <p class="stat special-attack">Sp. Atk: <span class="right">43</span></p>
+                    </s>
+                    <p class="stat defense">Defense: <span class="right">60</span></p>
+                    <p class="stat special-defense">Sp. Def: <span class="right">50</span></p>
+                    <p class="stat speed">Speed: <span class="right">65</span></p>
+                    <p class="stat total">Total: <span class="right">309</span></p>
+                </div>
+                <div class="extra">
+                    <div class="stat hp">
+                        <img src="../assets/Down.png" alt="">
+                    </div>
+                    <div class="stat attack"></div>
+                    <div class="stat special-attack"></div>
+                    <div class="stat defense"></div>
+                    <div class="stat special-defense"></div>
+                    <div class="stat speed">
+                        <img src="../assets/Up.png" alt="">
+                    </div>
+                    <div class="stat total">
+                        <p>52</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Spawn conditions of the Pokémon -->
             <div id="spawn">
-                <div id="biome">
-
+                <div id="header">
+                    <p id="header-biome"><b>Biome</b></p>
+                    <p id="header-rarity"><b>Rarity</b></p>
+                    <p id="header-time"><b>Time</b></p>
+                    <p id="header-location"><b>Location</b></p>
+                    <p id="header-weather"><b>Weather</b></p>
                 </div>
-                <div id="rarity">
-
-                </div>
-                <div id="location">
-
-                </div>
-                <div id="time">
-
-                </div>
-                <div id="condition">
-
+                <div id="content">
+                    <div id="biome">
+                        <p>Mountains</p>
+                        <p>Mountain Edge</p>
+                        <p>Wooded Mountains</p>
+                        <p>Gravelly Mountains</p>
+                        <p>Gravelly Mountains+</p>
+                        <p>Ultra Rocky</p>
+                    </div>
+                    <div id="rarity">
+                        <p>5</p>
+                        <p>5</p>
+                        <p>5</p>
+                        <p>5</p>
+                        <p>5</p>
+                        <p>5</p>
+                    </div>
+                    <div id="time">
+                        <p>Day</p>
+                        <p>Day</p>
+                        <p>Day</p>
+                        <p>Day</p>
+                        <p>Day</p>
+                        <p>Day</p>
+                    </div>
+                    <div id="location">
+                        <p>Land</p>
+                        <p>Land</p>
+                        <p>Land</p>
+                        <p>Land</p>
+                        <p>Land</p>
+                        <p>Land</p>
+                    </div>
+                    <div id="weather">
+                        <p>Clear</p>
+                        <p>Clear</p>
+                        <p>Clear</p>
+                        <p>Clear</p>
+                        <p>Clear</p>
+                        <p>Clear</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="break"></div>
+            <div id="separate-bottom"></div>
 
             <!-- Buttons to go back/forward through the wikipedia -->
-            <button class="goto button-text" id="go-back">← #003</button>
-            <button class="goto button-text" id="go-forward">#005 →</button>
+            <div id="bottom-menu">
+                <button class="goto button-text" id="go-back">← #003</button>
+                <button name="Switch" id="more-info"></button>
+                <button class="goto button-text" id="go-forward">#005 →</button>
+                <hr>
+            </div>
         </div>
     </div>
 </body>
