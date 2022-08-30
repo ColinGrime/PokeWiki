@@ -3,6 +3,13 @@
   src: url("../assets/Minecraftia.ttf");
 }
 
+:root {
+  --dark-background: rgb(14, 17, 23);
+  --dark-outline: rgb(50, 58, 70);
+  --dark-hover: rgba(22, 27, 34, 0.5);
+  --white-main: rgb(234, 240, 244);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -24,11 +31,11 @@ button:hover {
       -ms-user-select: none;
           user-select: none;
   border-radius: 10px;
-  background-color: #0e1117;
+  background-color: var(--dark-background);
 }
 
 #menu {
-  background: #1f2329;
+  background: var(--dark-outline);
   -webkit-app-region: drag;
   height: 35px;
   width: 100%;
@@ -43,11 +50,11 @@ button:hover {
   font-size: 16px;
   float: left;
   padding: 5px 15px;
-  color: rgba(240, 246, 251, 0.95);
+  color: var(--white-main);
 }
 
 .button-text:hover {
-  background: rgba(22, 27, 34, 0.5);
+  background: var(--dark-hover);
 }
 
 .button-image {
@@ -63,6 +70,10 @@ button:hover {
   border: none;
   -webkit-filter: drop-shadow(1px 1px black);
           filter: drop-shadow(1px 1px black);
+}
+
+#menu-wiki {
+  background: var(--dark-hover);
 }
 
 #menu-show {
@@ -93,6 +104,8 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 10px;
 }
 
@@ -107,7 +120,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 4px solid #1f2329;
+  border: 4px solid var(--dark-outline);
   border-radius: 15px;
   height: 300px;
   width: 200px;
@@ -124,13 +137,13 @@ button:hover {
 .pokecard .id {
   margin: 10px;
   margin-top: 0;
-  background-color: #0e1117;
+  background-color: var(--dark-background);
 }
 
 .pokecard .top-line {
   position: relative;
   bottom: 21px;
-  border: 1px solid #1f2329;
+  border: 1px solid var(--dark-outline);
   height: 1px;
   width: 192px;
   z-index: -1;
@@ -146,7 +159,7 @@ button:hover {
 .pokecard .bottom-line-1 {
   position: relative;
   top: 23.5px;
-  border: 1.5px solid #1f2329;
+  border: 1.5px solid var(--dark-outline);
   height: 1px;
   width: 192px;
 }
@@ -154,7 +167,7 @@ button:hover {
 .pokecard .bottom-line-2 {
   position: relative;
   top: 29.5px;
-  border: 1.5px solid #1f2329;
+  border: 1.5px solid var(--dark-outline);
   height: 1px;
   width: 192px;
 }
@@ -162,7 +175,7 @@ button:hover {
 .pokecard .bottom-line-3 {
   position: relative;
   top: 20px;
-  border: 3.5px solid #0e1117;
+  border: 3.5px solid var(--dark-background);
   height: 1px;
   width: 192px;
   z-index: 1;
@@ -172,7 +185,7 @@ button:hover {
   position: absolute;
   top: 286px;
   border-radius: 50%;
-  border: 3.5px solid #1f2329;
+  border: 3.5px solid var(--dark-outline);
   height: 52px;
   width: 52px;
 }
@@ -181,7 +194,7 @@ button:hover {
   position: absolute;
   top: 289px;
   border-radius: 50%;
-  background-color: #0e1117;
+  background-color: var(--dark-background);
   height: 46px;
   width: 46px;
 }
@@ -201,5 +214,97 @@ button:hover {
 
 .types {
   padding: 10px;
+}
+
+#search-bar {
+  position: absolute;
+  right: 10px;
+  z-index: 0;
+}
+
+#search-bar #search {
+  width: 155px;
+  padding: 3px 4px;
+  border: 1.2px solid #363c45;
+  border-radius: 7.5px;
+  background-color: var(--white-main);
+  color: #0e1117;
+}
+
+#search-bar #search:focus {
+  outline-style: solid;
+  outline-width: 0.7px;
+  outline-color: #6464b7;
+}
+
+#search-bar #results {
+  position: relative;
+  bottom: 7px;
+  z-index: -1;
+  width: 99%;
+  margin: 0 auto;
+  border: 1px solid #363c45;
+  border-radius: 2.5px;
+  background-color: var(--white-main);
+  display: none;
+}
+
+#search-bar #results #results-list {
+  list-style: none;
+}
+
+#search-bar #results #results-list li {
+  color: var(--dark-outline);
+  padding: 0.5px 6px;
+}
+
+#search-bar #results #results-list li:first-of-type {
+  padding-top: 6px;
+}
+
+#search-bar #results #results-list li:last-of-type {
+  padding-bottom: 2px;
+}
+
+#search-bar #results #results-list li:hover {
+  cursor: pointer;
+  color: var(--white-main);
+  background-color: #5b5bbc;
+}
+
+.break {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 0;
+}
+
+.base-stats {
+  margin: 5px;
+  width: 130px;
+}
+
+.base-stats .stat {
+  border: 1px solid red;
+  padding: 1.5px 4px;
+}
+
+.base-stats .stat .right {
+  float: right;
+}
+
+.goto {
+  border: 3px solid var(--dark-hover);
+  border-radius: 10px;
+  background-color: var(--dark-outline);
+  padding: 3px 8px 3px 8px;
+  margin-top: 20px;
+}
+
+.goto#go-back {
+  float: left;
+}
+
+.goto#go-forward {
+  margin-left: auto;
 }
 /*# sourceMappingURL=styles.css.map */

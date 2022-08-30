@@ -1,6 +1,15 @@
+// TODO make theme colors easier to manage
+
 @font-face {
     font-family: "Minecraftia";
     src: url("../assets/Minecraftia.ttf");
+}
+
+:root {
+    --dark-background: rgb(14, 17, 23);
+    --dark-outline: rgb(50, 58, 70);
+    --dark-hover: rgba(22, 27, 34, 0.5);
+    --white-main: rgb(234, 240, 244);
 }
 
 * {
@@ -20,11 +29,11 @@ button:hover {
     overflow: hidden;
     user-select: none;
     border-radius: 10px;
-    background-color: rgb(14, 17, 23);
+    background-color: var(--dark-background);
 }
 
 #menu {
-    background: rgb(31, 35, 41);
+    background: var(--dark-outline);
     -webkit-app-region: drag;
     height: 35px;
     width: 100%;
@@ -39,10 +48,10 @@ button:hover {
     font-size: 16px;
     float: left;
     padding: 5px 15px;
-    color: rgba(240, 246, 251, 0.95);
+    color: var(--white-main);
 
     &:hover {
-        background: rgba(22, 27, 34, 0.5);
+        background: var(--dark-hover);
     }
 }
 
@@ -56,7 +65,11 @@ button:hover {
     margin: 5px;
     margin-left: 0;
     border: none;
-    filter: drop-shadow(1px 1px rgb(0, 0, 0));
+    filter: drop-shadow(1px 1px black);
+}
+
+#menu-wiki {
+    background: var(--dark-hover);
 }
 
 #menu-show {
@@ -86,6 +99,7 @@ button:hover {
 
 #wiki {
     display: flex;
+    flex-wrap: wrap;
     margin: 10px;
 }
 
@@ -93,7 +107,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 4px solid rgb(31, 35, 41);
+    border: 4px solid var(--dark-outline);
     border-radius: 15px;
     height: 300px;
     width: 200px;
@@ -109,13 +123,13 @@ button:hover {
     .id {
         margin: 10px;
         margin-top: 0;
-        background-color: rgb(14, 17, 23);
+        background-color: var(--dark-background);
     }
 
     .top-line {
         position: relative;
         bottom: 21px;
-        border: 1px solid rgb(31, 35, 41);
+        border: 1px solid var(--dark-outline);
         height: 1px;
         width: 192px;
         z-index: -1;
@@ -130,7 +144,7 @@ button:hover {
     .bottom-line-1 {
         position: relative;
         top: 23.5px;
-        border: 1.5px solid rgb(31, 35, 41);
+        border: 1.5px solid var(--dark-outline);
         height: 1px;
         width: 192px;
     }
@@ -138,7 +152,7 @@ button:hover {
     .bottom-line-2 {
         position: relative;
         top: 29.5px;
-        border: 1.5px solid rgb(31, 35, 41);
+        border: 1.5px solid var(--dark-outline);
         height: 1px;
         width: 192px;
     }
@@ -146,7 +160,7 @@ button:hover {
     .bottom-line-3 {
         position: relative;
         top: 20px;
-        border: 3.5px solid rgb(14, 17, 23);
+        border: 3.5px solid var(--dark-background);
         height: 1px;
         width: 192px;
         z-index: 1;
@@ -156,7 +170,7 @@ button:hover {
         position: absolute;
         top: 286px;
         border-radius: 50%;
-        border: 3.5px solid rgb(31, 35, 41);
+        border: 3.5px solid var(--dark-outline);
         height: 52px;
         width: 52px;
     }
@@ -165,7 +179,7 @@ button:hover {
         position: absolute;
         top: 289px;
         border-radius: 50%;
-        background-color: rgb(14, 17, 23);
+        background-color: var(--dark-background);
         height: 46px;
         width: 46px;
     }
@@ -185,4 +199,99 @@ button:hover {
 
 .types {
     padding: 10px;
+}
+
+#search-bar {
+    position: absolute;
+    right: 10px;
+    z-index: 0;
+
+    #search {
+        width: 155px;
+        padding: 3px 4px;
+        // TODO new color for
+        border: 1.2px solid rgb(54, 60, 69);
+        border-radius: 7.5px;
+        background-color: var(--white-main);
+        color: rgb(14, 17, 23);
+
+        &:focus {
+            outline-style: solid;
+            outline-width: 0.7px;
+            outline-color: rgb(100, 100, 183);
+        }
+    }
+
+    #results {
+        position: relative;
+        bottom: 7px;
+        z-index: -1;
+        width: 99%;
+        margin: 0 auto;
+        border: 1px solid rgb(54, 60, 69);
+        border-radius: 2.5px;
+        background-color: var(--white-main);
+        display: none;
+
+        #results-list {
+            list-style: none;
+            // padding: 6px 4px;
+            // padding-bottom: 3px;
+
+            li {
+                color: var(--dark-outline);
+                padding: 0.5px 6px;
+
+                &:first-of-type {
+                    padding-top: 6px;
+                }
+
+                &:last-of-type {
+                    padding-bottom: 2px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    color: var(--white-main);
+                    background-color: rgb(91, 91, 188);
+                }
+            }
+        }
+    }
+}
+
+.break {
+    flex-basis: 100%;
+    width: 0;
+}
+
+.base-stats {
+    margin: 5px;
+    width: 130px;
+
+    .stat {
+        border: 1px solid red;
+        padding: 1.5px 4px;
+
+        .right {
+            float: right;
+        }
+    }
+}
+
+.goto {
+    // TODO new border color
+    border: 3px solid var(--dark-hover);
+    border-radius: 10px;
+    background-color: var(--dark-outline);
+    padding: 3px 8px 3px 8px;
+    margin-top: 20px;
+
+    &#go-back {
+        float: left;
+    }
+
+    &#go-forward {
+        margin-left: auto;
+    }
 }

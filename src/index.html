@@ -21,7 +21,9 @@
             <button name="Minimize" class="menu-item button-image" id="menu-minimize"></button>
             <button name="Show" class="menu-item button-image" id="menu-show"></button>
         </div>
+        <!-- Wikipedia page -->
         <div id="wiki">
+            <!-- Card displaying each Pokémon -->
             <div class="pokecard">
                 <p class="name">Charmander</p>
                 <p class="id">(#004)</p>
@@ -36,6 +38,8 @@
                 <div class="bottom-background"></div>
                 <button name="Swap" class="swap"></button>
             </div>
+
+            <!-- Displays type information about the specified Pokémon -->
             <div class="types">
                 <p>Types: Fire</p>
                 <br>
@@ -48,20 +52,59 @@
                 <p>Immunities (0%)</p>
                 <p>→ None</p>
             </div>
+
+            <!-- Allows you to search for other Pokémon in the wikipedia -->
+            <div id="search-bar">
+                <input type="text" id="search" placeholder="Search Pokémon" maxlength="13">
+
+                <!-- Auto completion -->
+                <div id="results">
+                    <ul id="results-list">
+                        <!-- <li>Onix</li>
+                        <li>Oh</li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="break"></div>
+
+            <!-- Base stats of the Pokémon -->
+            <div class="base-stats">
+                <p class="stat hp">HP: <span class="right">39</span></p>
+                <p class="stat attack">Attack: <span class="right">52</span></p>
+                <p class="stat special-attack">Sp. Atk: <span class="right">43</span></p>
+                <p class="stat defense">Defense: <span class="right">60</span></p>
+                <p class="stat special-defense">Sp. Def: <span class="right">50</span></p>
+                <p class="stat speed">Speed: <span class="right">65</span></p>
+                <p class="stat total">Total: <span class="right">309</span></p>
+            </div>
+
+            <!-- Spawn conditions of the Pokémon -->
+            <div id="spawn">
+                <div id="biome">
+
+                </div>
+                <div id="rarity">
+
+                </div>
+                <div id="location">
+
+                </div>
+                <div id="time">
+
+                </div>
+                <div id="condition">
+
+                </div>
+            </div>
+
+            <div class="break"></div>
+
+            <!-- Buttons to go back/forward through the wikipedia -->
+            <button class="goto button-text" id="go-back">← #003</button>
+            <button class="goto button-text" id="go-forward">#005 →</button>
         </div>
     </div>
-
-
-
-
-
-    <!-- <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-
-    You can also require other files to run in this process
-    <script src="./renderer.js"></script> -->
 </body>
 
 </html>

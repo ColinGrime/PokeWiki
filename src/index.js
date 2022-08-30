@@ -1,6 +1,6 @@
 const { app, BrowserWindow } = require('@electron/remote')
 window.$ = window.jQuery = require('jquery')
-const types = require('./types.js')
+const pokemon = require('./pokemon.js')
 
 let show = true;
 
@@ -32,7 +32,26 @@ $(() => {
         $('.swap').css('height', '100px')
     });
 
-    $('.types p').each((i, p) => {
-        p.innerHTML = types.replaceColors(p.innerHTML)
+    $('.types p').each((index, element) => {
+        element.innerHTML = pokemon.replaceColors(element.innerHTML)
     });
+
+    $('#search').on('input', () => {
+        let html = ''
+        for (const name of pokemon.autoCompleteName($('#search').val())) {
+            html += `<li>${name}</li>`
+        }
+
+        $('#results-list').html(html)
+
+        if (html === '') {
+            $('#results').hide()
+        } else {
+            $('#results').show()
+        }
+    })
+
+    $('#search').on('blur', () => $('#results').hide())
+
+    // TODO make it so search options are clickable and will auto fill in
 });
