@@ -1,22 +1,25 @@
-const { app, BrowserWindow } = require('@electron/remote')
+const { BrowserWindow } = require('@electron/remote')
 window.$ = window.jQuery = require('jquery')
-const pokemon = require('./pokemon.js')
 
-let show = true;
+// Add pokemon.js file for all Pokémon-related tasks.
+const pokemon = require('./pokemon/pokemon.js')
 
 $(() => {
     currentWindow = BrowserWindow.getAllWindows()
     currentWindow = currentWindow[0]
 
-    // TODO not closed all the way
+    // Quit the application.
     $('#menu-quit').on('click', () => {
         currentWindow.close()
     });
 
+    // Minimize the application.
     $('#menu-minimize').on('click', () => {
         currentWindow.minimize()
     });
 
+    // [Show/Hide] the application.
+    let show = true
     $('#menu-show').on('click', () => {
         if (show) {
             currentWindow.setSize(currentWindow.webContents.getOwnerBrowserWindow().getBounds().width, 35, true)
@@ -27,15 +30,18 @@ $(() => {
         }
     });
 
+    // Swap Pokécard on click.
     $('.swap').on('click', () => {
         // TODO do this swappy swap image on pixelman
         $('.swap').css('height', '100px')
     });
 
+    // Go through all Pokémon types and color code accordingly.
     $('.types p').each((index, element) => {
         element.innerHTML = pokemon.replaceColors(element.innerHTML)
     });
 
+    // Search bar mechanics.
     $('#search').on('input', () => {
         let html = ''
         for (const name of pokemon.autoCompleteName($('#search').val())) {
@@ -51,6 +57,7 @@ $(() => {
         }
     })
 
+    // Erase search bar when unfocused.
     $('#search').on('blur', () => $('#results').hide())
 
     // TODO make it so search options are clickable and will auto fill in
