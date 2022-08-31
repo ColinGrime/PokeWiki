@@ -278,20 +278,25 @@ button:hover {
   list-style: none;
 }
 
-#search-bar #results #results-list li {
+#search-bar #results #results-list li button {
+  text-align: left;
+  border: none;
+  background: transparent;
+  background-size: cover;
   color: var(--dark-section);
   padding: 0.5px 6px;
+  width: 100%;
 }
 
-#search-bar #results #results-list li:first-of-type {
+#search-bar #results #results-list li button:first-of-type {
   padding-top: 6px;
 }
 
-#search-bar #results #results-list li:last-of-type {
+#search-bar #results #results-list li button:last-of-type {
   padding-bottom: 2px;
 }
 
-#search-bar #results #results-list li:hover {
+#search-bar #results #results-list li button:hover {
   cursor: pointer;
   color: var(--white-main);
   background-color: #5b5bbc;

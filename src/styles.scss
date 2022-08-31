@@ -256,9 +256,14 @@ button:hover {
         #results-list {
             list-style: none;
 
-            li {
+            li button {
+                text-align: left;
+                border: none;
+                background: transparent;
+                background-size: cover;
                 color: var(--dark-section);
                 padding: 0.5px 6px;
+                width: 100%;
 
                 &:first-of-type {
                     padding-top: 6px;

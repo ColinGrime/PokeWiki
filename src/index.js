@@ -25,7 +25,7 @@ $(() => {
             currentWindow.setSize(currentWindow.webContents.getOwnerBrowserWindow().getBounds().width, 35, true)
             show = false;
         } else {
-            currentWindow.setSize(currentWindow.webContents.getOwnerBrowserWindow().getBounds().width, 600, true)
+            currentWindow.setSize(currentWindow.webContents.getOwnerBrowserWindow().getBounds().width, 700, true)
             show = true;
         }
     });
@@ -45,7 +45,7 @@ $(() => {
     $('#search').on('input', () => {
         let html = ''
         for (const name of pokemon.autoCompleteName($('#search').val())) {
-            html += `<li>${name}</li>`
+            html += `<li><button class="search-button">${name}</button></li>`
         }
 
         $('#results-list').html(html)
@@ -60,5 +60,9 @@ $(() => {
     // Erase search bar when unfocused.
     $('#search').on('blur', () => $('#results').hide())
 
-    // TODO make it so search options are clickable and will auto fill in
+    // Search buttons will auto-fill in on click.
+    $('#results-list').on('mousedown', 'li .search-button', (event) => {
+        $('#search').val($(event.target).text())
+        $('#results').hide()
+    })
 });
