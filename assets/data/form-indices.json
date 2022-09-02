@@ -1,0 +1,558 @@
+{
+    "Abomasnow": {
+        "0": "Abomasnow",
+        "1": "Mega Abomasnow"
+    },
+    "Absol": {
+        "0": "Absol",
+        "1": "Mega Absol"
+    },
+    "Aegislash": {
+        "0": "Aegislash",
+        "1": "Aegislash-Blade",
+        "2": "Aegislash-Alter"
+    },
+    "Aerodactyl": {
+        "0": "Aerodactyl",
+        "1": "Mega Aerodactyl"
+    },
+    "Aggron": {
+        "0": "Aggron",
+        "1": "Mega Aggron"
+    },
+    "Alakazam": {
+        "0": "Alakazam",
+        "1": "Mega Alakazam"
+    },
+    "Altaria": {
+        "0": "Altaria",
+        "1": "Mega Altaria"
+    },
+    "Amoonguss": {
+        "0": "Amoonguss",
+        "1": "Black Sus Amoongus",
+        "2": "Brown Sus Amoongus",
+        "3": "Cyan Sus Amoongus",
+        "4": "Dark Blue Sus Amoongus",
+        "5": "Dark Green Sus Amoongus",
+        "6": "Dark Pink Sus Amoongus",
+        "7": "Dark Red Sus Amoongus",
+        "8": "Forte Green Sus Amoongus",
+        "9": "Grey Sus Amoongus",
+        "10": "Light Brown Sus Amoongus",
+        "11": "Light Pink Sus Amoongus",
+        "12": "Light Yellow Sus Amoongus",
+        "13": "Lime Sus Amoongus",
+        "14": "Olive Sus Amoongus",
+        "15": "Orange Sus Amoongus",
+        "16": "Pink Sus Amoongus",
+        "17": "Purple Sus Amoongus",
+        "18": "Red Sus Amoongus",
+        "19": "White Sus Amoongus",
+        "20": "Yellow Sus Amoongus"
+    },
+    "Ampharos": {
+        "0": "Ampharos",
+        "1": "Mega Ampharos"
+    },
+    "Arbok": {
+        "0": "Arbok",
+        "1": "Arbok-Primary Circular",
+        "2": "Arbok-Secondary Circular",
+        "3": "Arbok-Dark"
+    },
+    "Arcanine": {
+        "0": "Arcanine",
+        "3": "Hisuian Arcanine",
+        "100": "Zombie Arcanine",
+        "113": "Arcanine Ashen"
+    },
+    "Arceus": {
+        "0": "Arceus-Normal",
+        "1": "Arceus-Grass",
+        "2": "Arceus-Fire",
+        "3": "Arceus-Water",
+        "4": "Arceus-Flying",
+        "5": "Arceus-Bug",
+        "6": "Arceus-Poison",
+        "7": "Arceus-Electric",
+        "8": "Arceus-Psychic",
+        "9": "Arceus-Rock",
+        "10": "Arceus-Ground",
+        "11": "Arceus-Dark",
+        "12": "Arceus-Ghost",
+        "13": "Arceus-Steel",
+        "14": "Arceus-Fighting",
+        "15": "Arceus-Ice",
+        "16": "Arceus-Dragon",
+        "17": "Arceus-Fairy"
+    },
+    "Articuno": {
+        "0": "Articuno",
+        "2": "Articuno-Galarian"
+    },
+    "Audino": {
+        "0": "Audino",
+        "1": "Mega Audino"
+    },
+    "Azumarill": {
+        "0": "Azumarill",
+        "107": "Azumarill-Alter"
+    },
+    "Bagon": {
+        "0": "Bagon",
+        "107": "Bagon-Alter"
+    },
+    "Baltoy": {
+        "0": "Baltoy",
+        "107": "Baltoy-Alter"
+    },
+    "Banette": {
+        "0": "Banette",
+        "1": "Mega Banette"
+    },
+    "Basculin": {
+        "0": "Basculin-Red-Striped",
+        "1": "Basculin-Blue-Striped",
+        "2": "Basculin-White-Striped"
+    },
+    "Beautifly": {
+        "0": "Beautifly",
+        "104": "Beautifly-Rainbow"
+    },
+    "Beedrill": {
+        "0": "Beedrill",
+        "1": "Mega Beedrill",
+        "91": "Mega Beedrill-Pink",
+        "108": "Beedrill-Pink"
+    },
+    "Bellossom": {
+        "0": "Bellossom",
+        "106": "Bellossom-Valencian",
+        "108": "Bellossom-Pink"
+    },
+    "Bellsprout": {
+        "0": "Bellsprout",
+        "106": "Bellsprout-Valencian",
+        "108": "Bellsprout-Pink"
+    },
+    "Bidoof": {
+        "0": "Bidoof",
+        "1": "Sir Doofus III"
+    },
+    "Blastoise": {
+        "0": "Blastoise",
+        "1": "Mega Blastoise",
+        "99": "Mega Blastoise-Zombie",
+        "100": "Blastoise-Zombie"
+    },
+    "Blaziken": {
+        "0": "Blaziken",
+        "1": "Mega Blaziken",
+        "99": "Mega Blaziken-Zombie",
+        "100": "Blaziken-Zombie"
+    },
+    "Blissey": {
+        "0": "Blissey",
+        "106": "Blissey-Valencian"
+    },
+    "Boltund": {
+        "0": "Boltund",
+        "112": "Boltund-Strike"
+    },
+    "Braviary": {
+        "0": "Braviary",
+        "3": "Hisuian Braviary"
+    },
+    "Breloom": {
+        "0": "Breloom",
+        "114": "Breloom-Spirit"
+    },
+    "Burmy": {
+        "0": "Burmy-Plant",
+        "1": "Burmy-Sandy",
+        "2": "Burmy-Trash"
+    },
+    "Butterfree": {
+        "0": "Butterfree",
+        "108": "Butterfree-Pink",
+        "106": "Butterfree-Valencian"
+    },
+    "Calyrex": {
+        "0": "Calyrex",
+        "1": "Calyrex Ice Rider",
+        "2": "Calyrex Shadow Rider"
+    },
+    "Camerupt": {
+        "0": "Camerupt",
+        "1": "Mega Camerupt"
+    },
+    "Castform": {
+        "0": "Castform",
+        "1": "Castform-Snowy",
+        "2": "Castform-Rainy",
+        "3": "Castform-Sunny"
+    },
+    "Caterpie": {
+        "0": "Caterpie",
+        "106": "Caterpie-Valencian",
+        "108": "Caterpie-Pink"
+    },
+    "Celebi": {
+        "0": "Celebi",
+        "105": "Celebi-Alien"
+    },
+    "Centiskorch": {
+        "0": "Centiskorch",
+        "113": "Centiskorch-Ashen"
+    },
+    "Chansey": {
+        "0": "Chansey",
+        "106": "Chansey-Valencian"
+    },
+    "Charizard": {
+        "0": "Charizard",
+        "1": "Mega Charizard X",
+        "2": "Mega Charizard Y",
+        "100": "Charizard-Zombie"
+    },
+    "Cherrim": {
+        "0": "Cherrim-Overcast",
+        "1": "Cherrim-Sunshine"
+    },
+    "Chesnaught": {
+        "0": "Chesnaught",
+        "100": "Chesnaught-Zombie"
+    },
+    "Claydol": {
+        "0": "Claydol",
+        "102": "Claydol-Drowned",
+        "107": "Claydol-Alter"
+    },
+    "Clobbopus": {
+        "0": "Clobbopus",
+        "1": "Clobbopus-Irish",
+        "2": "Clobbopus-Diamonds",
+        "3": "Clobbopus-Clubs",
+        "4": "Clobbopus-Martian",
+        "5": "Clobbopus-Starry",
+        "6": "Clobbopus-Yellow Ringed",
+        "7": "Clobbopus-Red Ringed",
+        "8": "Clobbopus-Alien"
+    },
+    "Corsola": {
+        "0": "Corsola",
+        "2": "Galarian Corsola"
+    },
+    "Crawdaunt": {
+        "0": "Crawdaunt",
+        "104": "Crawdaunt-Rainbow"
+    },
+    "Cresselia": {
+        "0": "Cresselia",
+        "104": "Cresselia-Rainbow",
+        "114": "Cresselia-Spirit"
+    },
+    "Crobat": {
+        "0": "Crobat",
+        "112": "Crobat-Strike"
+    },
+    "Darmanitan": {
+        "0": "Darmanitan-Standard",
+        "1": "Darmanitan-Zen",
+        "2": "Galarian Darmanitan",
+        "3": "Galarian Darmanitan - Zen"
+    },
+    "Darumaka": {
+        "0": "Darumaka",
+        "2": "Galarian Darumaka"
+    },
+    "Decidueye": {
+        "0": "Decidueye",
+        "3": "Hisuian Decidueye"
+    },
+    "Deerling": {
+        "0": "Deerling-Spring",
+        "1": "Deerling-Summer",
+        "2": "Deerling-Autumn",
+        "3": "Deerling-Winter"
+    },
+    "Delphox": {
+        "0": "Delphox",
+        "100": "Delphox-Zombie"
+    },
+    "Deoxys": {
+        "0": "Deoxys",
+        "1": "Deoxys-Attack",
+        "2": "Deoxys-Defense",
+        "3": "Deoxys-Speed",
+        "4": "Deoxys Sus"
+    },
+    "Diancie": {
+        "0": "Diancie",
+        "1": "Mega Diancie"
+    },
+    "Diglett": {
+        "0": "Diglett",
+        "1": "Diglett-Alolan",
+        "108": "Diglett-Pink"
+    },
+    "Ditto": {
+        "0": "Ditto",
+        "100": "Ditto-Zombie"
+    },
+    "Dodrio": {
+        "0": "Dodrio",
+        "108": "Dodrio-Pink"
+    },
+    "Doduo": {
+        "0": "Doduo",
+        "108": "Doduo-Pink"
+    },
+    "Doublade": {
+        "0": "Doublade",
+        "107": "Doublade-Alter"
+    },
+    "Dragapult": {
+        "0": "Dragapult",
+        "114": "Dragapult-Spirit"
+    },
+    "Dragonite": {
+        "0": "Dragonite",
+        "111": "Dragonite-Creator",
+        "113": "Dragonite-Ashen"
+    },
+    "Drakloak": {
+        "0": "Drakloak",
+        "114": "Drakloak-Spirit"
+    },
+    "Dreepy": {
+        "0": "Dreepy",
+        "114": "Dreepy-Spirit"
+    },
+    "Dubwool": {
+        "0": "Dubwool",
+        "1": "Dubwool-Shorn",
+        "2": "Dubwool-Black",
+        "3": "Dubwool-Blue",
+        "4": "Dubwool-Brown",
+        "5": "Dubwool-Cyan",
+        "6": "Dubwool-Gray",
+        "7": "Dubwool-Green",
+        "8": "Dubwool-Light Gray",
+        "9": "Dubwool-White",
+        "10": "Dubwool-Lime",
+        "11": "Dubwool-Magenta",
+        "12": "Dubwool-Orange",
+        "13": "Dubwool-Pink",
+        "14": "Dubwool-Purple",
+        "15": "Dubwool-Red",
+        "16": "Dubwool-Yellow"
+    },
+    "Dugtrio": {
+        "0": "Dugtrio",
+        "1": "Dugtrio-Alolan",
+        "108": "Dugtrio-Pink"
+    },
+    "Dustox": {
+        "0": "Dustox",
+        "104": "Dustox-Rainbow",
+        "113": "Dustox-Ashen"
+    },
+    "Eevee": {
+        "0": "Eevee",
+        "111": "Eevee-Creator",
+        "112": "Eevee-Strike",
+        "114": "Eevee-Spirit"
+    },
+    "Eiscue": {
+        "0": "Eiscue-Ice Face",
+        "1": "Eiscue-Noice Face"
+    },
+    "Electivire": {
+        "0": "Electivire",
+        "112": "Electivire-Strike"
+    },
+    "Electrode": {
+        "0": "Electrode",
+        "3": "Hisuian Electrode",
+        "109": "Electrode-Summer"
+    },
+    "Emboar": {
+        "0": "Emboar",
+        "100": "Emboar-Zombie"
+    },
+    "Empoleon": {
+        "0": "Empoleon",
+        "100": "Empoleon-Zombie"
+    },
+    "Espeon": {
+        "0": "Espeon",
+        "112": "Espeon-Strike",
+        "114": "Espeon-Spirit"
+    },
+    "Eternatus": {
+        "0": "Eternatus",
+        "1": "True Eternamax Eternatus",
+        "2": "Eternamax Eternatus"
+    },
+    "Exeggcute": {
+        "0": "Exeggcute",
+        "108": "Exeggcute-Pink"
+    },
+    "Exeggutor": {
+        "0": "Exeggutor",
+        "1": "Exeggutor-Alolan",
+        "108": "Exeggutor-Pink"
+    },
+    "Farfetch'd": {
+        "0": "Farfetch'd",
+        "2": "Galarian Farfetch'd"
+    },
+    "Feebas": {
+        "0": "Feebas",
+        "1": "Feebas-Karp",
+        "104": "Feebas-Rainbow"
+    },
+    "Finneon": {
+        "0": "Finneon",
+        "102": "Finneon-Drowned"
+    },
+    "Flygon": {
+        "0": "Flygon",
+        "102": "Flygon-Drowned"
+    },
+    "Flabebe": {
+        "0": "Flabebe-Red Flower",
+        "1": "Flabebe-Yellow Flower",
+        "2": "Flabebe-Orange Flower",
+        "3": "Flabebe-Blue Flower",
+        "4": "Flabebe-White Flower"
+    },
+    "Flareon": {
+        "0": "Flareon",
+        "114": "Flareon-Spirit"
+    },
+    "Floette": {
+        "0": "Floette-Red Flower",
+        "1": "Floette-Yellow Flower",
+        "2": "Floette-Orange Flower",
+        "3": "Floette-Blue Flower",
+        "4": "Floette-White Flower",
+        "5": "Floette-Eternal Flower"
+    },
+    "Florges": {
+        "0": "Florges-Red Flower",
+        "1": "Florges-Yellow Flower",
+        "2": "Florges-Orange Flower",
+        "3": "Florges-Blue Flower",
+        "4": "Florges-White Flower"
+    },
+    "Froakie": {
+        "0": "Froakie",
+        "107": "Froakie-Alter"
+    },
+    "Frogadier": {
+        "0": "Frogadier",
+        "107": "Frogadier-Alter"
+    },
+    "Gallade": {
+        "0": "Gallade",
+        "1": "Mega Gallade",
+        "112": "Gallade-Strike"
+    },
+    "Garchomp": {
+        "0": "Garchomp",
+        "1": "Mega Garchomp"
+    },
+    "Gardevoir": {
+        "0": "Gardevoir",
+        "1": "Mega Gardevoir",
+        "103": "Gardevoir-Loved",
+        "112": "Gardevoir-Strike"
+    },
+    "Gastrodon": {
+        "0": "Gastrodon-East",
+        "1": "Gastrodon-West"
+    },
+    "Genesect": {
+        "0": "Genesect",
+        "1": "Genesect-Burn Drive",
+        "2": "Genesect-Chill Drive",
+        "3": "Genesect-Douse Drive",
+        "4": "Genesect-Shock Drive"
+    },
+    "Gengar": {
+        "0": "Gengar",
+        "1": "Mega Gengar",
+        "113": "Gengar-Ashen"
+    },
+    "Geodude": {
+        "0": "Geodude",
+        "1": "Geodude-Alolan"
+    },
+    "Giratina": {
+        "0": "Giratina-Altered",
+        "1": "Giratina-Origin"
+    },
+    "Glaceon": {
+        "0": "Glaceon",
+        "114": "Glaceon-Spirit"
+    },
+    "Glalie": {
+        "0": "Glalie",
+        "1": "Mega Glalie"
+    },
+    "Gloom": {
+        "0": "Gloom",
+        "106": "Gloom-Valencian",
+        "108": "Gloom-Pink"
+    },
+    "Golbat": {
+        "0": "Golbat",
+        "112": "Golbat-Strike"
+    },
+    "Golem": {
+        "0": "Golem",
+        "1": "Golem-Alolan"
+    },
+    "Goodra": {
+        "0": "Goodra",
+        "3": "Hisuian Goodra"
+    },
+    "Graveler": {
+        "0": "Graveler",
+        "1": "Graveler-Alolan"
+    },
+    "Greninja": {
+        "0": "Greninja",
+        "1": "Battle Bond Greninja",
+        "2": "Ash-Greninja",
+        "3": "Zombie Battle Bond Greninja",
+        "4": "Zombie-Greninja",
+        "5": "Zombie Ash-Greninja",
+        "6": "Alter Battle Bond Greninja",
+        "7": "Alter Greninja",
+        "8": "Alter Ash-Greninja"
+    },
+    "Grimer": {
+        "0": "Grimer",
+        "1": "Grimer-Alolan"
+    },
+    "Groudon": {
+        "0": "Groudon",
+        "1": "Groudon-Primal",
+        "3": "Meta Groudon"
+    },
+    "Growlithe": {
+        "0": "Growlithe",
+        "3": "Hisuian Growlithe"
+    },
+    "Gyarados": {
+        "0": "Gyarados",
+        "1": "Mega Gyarados",
+        "99": "Mega Gyarados-Zombie",
+        "100": "Gyarados-Zombie",
+        "102": "Drowned Gyarados"
+    }
+}
