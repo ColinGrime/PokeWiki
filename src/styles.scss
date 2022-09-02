@@ -3,6 +3,11 @@
     src: url("../assets/Minecraftia.ttf");
 }
 
+@font-face {
+    font-family: "Marker";
+    src: url("../assets/Marker.ttf");
+}
+
 :root {
     --dark-background: rgb(14, 17, 23);
     --dark-section: rgb(50, 58, 70);
@@ -78,26 +83,26 @@ button:hover {
 }
 
 #menu-show {
-    background-image: url("../assets/Show_1.png");
+    background-image: url("../assets/Menu/Show_1.png");
 
     &:hover {
-        background-image: url("../assets/Show_2.png");
+        background-image: url("../assets/Menu/Show_2.png");
     }
 }
 
 #menu-minimize {
-    background-image: url("../assets/Minimize_1.png");
+    background-image: url("../assets/Menu/Minimize_1.png");
 
     &:hover {
-        background-image: url("../assets/Minimize_2.png");
+        background-image: url("../assets/Menu/Minimize_2.png");
     }
 }
 
 #menu-quit {
-    background-image: url("../assets/Quit_1.png");
+    background-image: url("../assets/Menu/Quit_1.png");
 
     &:hover {
-        background-image: url("../assets/Quit_2.png");
+        background-image: url("../assets/Menu/Quit_2.png");
     }
 }
 
@@ -105,6 +110,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
+    height: 577px;
 }
 
 .pokecard {
@@ -123,6 +129,13 @@ button:hover {
         margin-bottom: 0;
         text-align: center;
         font-size: 18px;
+        display: inline-block;
+    }
+
+    .legendary {
+        position: relative;
+        top: 5px;
+        height: 25px;
     }
 
     .id {
@@ -191,7 +204,7 @@ button:hover {
 
     .swap {
         background: transparent;
-        background-image: url("../assets/Swap.svg");
+        background-image: url("../assets/Extra/Swap.svg");
         filter: invert(1);
         background-size: cover;
         border: none;
@@ -203,6 +216,7 @@ button:hover {
 }
 
 .types {
+    height: 300px;
     margin: 10px;
     align-self: center;
 
@@ -218,6 +232,11 @@ button:hover {
 
     .tab {
         margin-left: 34px;
+    }
+
+    p {
+        width: 526px;
+        overflow-wrap: break-word;
     }
 }
 
@@ -302,11 +321,7 @@ button:hover {
 
     .stats {
         width: 125px;
-
-        s {
-            color: black;
-            text-decoration-thickness: 1.5px;
-        }
+        text-decoration-thickness: 1.5px;
     }
 
     .extra {
@@ -375,26 +390,22 @@ button:hover {
     margin-left: 10px;
     width: 600px;
     border: 1px solid var(--dark-outline);
+    overflow: hidden;
 
     #header {
         display: flex;
-        justify-content: space-around;
         flex-direction: row;
-        width: 100%;
 
         #header-biome {
             background-color: #97bd84;
-            width: 280%;
         }
 
         #header-rarity {
             background-color: #c394c9;
-            width: 80%;
         }
 
         #header-time {
             background-color: #8ea9e9;
-            width: 90%;
         }
 
         #header-location {
@@ -410,7 +421,6 @@ button:hover {
             justify-content: center;
             border: 1px solid var(--dark-outline);
             height: 25px;
-            width: 100%;
             background-color: #c6c6a7;
             color: black;
         }
@@ -420,32 +430,34 @@ button:hover {
         display: flex;
         flex-direction: row;
 
-        #biome {
-            width: 276%;
-
-            p {
-                background-color: #a7db8d;
-            }
+        #biome p {
+            background-color: #a7db8d;
         }
 
-        #rarity {
-            width: 80.5%;
-
-            p {
-                background-color: #d89fde;
-            }
+        #rarity p {
+            background-color: #d89fde;
         }
 
-        #time {
-            width: 90%;
-
-            p {
-                background-color: #9db7f5
-            }
+        #time div {
+            background-color: #9db7f5;
         }
 
-        #location p {
+        #location div {
             background-color: #f5ac78;
+        }
+
+        #time div,
+        #location div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: 23px;
+                width: 23px;
+                padding: 1px;
+            }
         }
 
         #weather p {
@@ -455,9 +467,9 @@ button:hover {
         div {
             display: flex;
             flex-direction: column;
-            width: 100%;
 
-            p {
+            p,
+            div {
                 border: 1px solid var(--dark-outline);
                 height: 25px;
                 padding-left: 5px;
@@ -466,6 +478,49 @@ button:hover {
                 text-align: center;
             }
         }
+    }
+
+    #header-biome,
+    #biome p {
+        width: 213px;
+    }
+
+    #header-rarity,
+    #rarity p {
+        width: 65px;
+    }
+
+    #header-time,
+    #time div {
+        width: 90px;
+    }
+
+    #header-location,
+    #location div {
+        width: 150px;
+    }
+
+    #header-weather,
+    #weather p {
+        width: 80px;
+    }
+}
+
+#no-natural-spawning-available {
+    position: absolute;
+    bottom: 160px;
+    right: 220px;
+    display: none;
+
+    p {
+        font-family: "Marker", "Trattatello", "fantasy";
+        font-size: 24px;
+        color: rgba(186, 151, 245, 0.8);
+        filter: drop-shadow(0.5px 0.5px rgba(0, 0, 0, 0.75));
+    }
+
+    .tab {
+        margin-left: 40px;
     }
 }
 
@@ -493,7 +548,6 @@ button:hover {
 }
 
 .goto {
-    // TODO different hover color
     border: 2px solid var(--dark-outline);
     border-radius: 20px;
     background-color: var(--dark-section);
@@ -507,15 +561,27 @@ button:hover {
     &#go-forward {
         margin-left: auto;
     }
+
+    &:hover {
+        background: rgb(66, 62, 92);
+    }
 }
 
 #more-info {
     border: none;
     background: transparent;
     background-size: cover;
-    background-image: url("../assets/Switch_Off.png");
+    background-image: url("../assets/Extra/Switch_Off.png");
     width: 60px;
     height: 60px;
     margin-left: auto;
     position: relative;
+}
+
+#battle {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    height: 577px;
+    display: none;
 }

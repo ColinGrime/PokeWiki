@@ -27,11 +27,13 @@
         <div id="wiki">
             <!-- Card displaying each Pokémon -->
             <div class="pokecard">
-                <p class="name">Charmander</p>
-                <p class="id">(#004)</p>
+                <div class="title">
+                    <p class="name"></p><img src="../assets/extra/Legendary.png" class="legendary">
+                </div>
+                <p class="id">(#<span class="id-num"></span>)</p>
                 <!-- Line through the ID number -->
                 <hr class="top-line">
-                <img src="../assets/Charmander.png" class="pokemon" />
+                <img src="" class="pokemon" />
                 <!-- Lines through the Swap Icon -->
                 <hr class="bottom-line-1">
                 <hr class="bottom-line-2">
@@ -43,23 +45,23 @@
 
             <!-- Displays type information about the specified Pokémon -->
             <div class="types">
-                <img src="../assets/Element.png" class="pic-to-left">
+                <img src="../assets/Extra/Element.png" class="pic-to-left">
                 <p class="pic-to-left"> Types:</p>
-                <p class="tab">→ Fire</p>
+                <p class="tab">→ <span class="type"></span></p>
                 <br>
-                <img src="../assets/Swords.png" class="pic-to-left">
+                <img src="../assets/Extra/Swords.png" class="pic-to-left">
                 <p class="pic-to-left">Weaknesses:</p>
-                <p class="tab">→ (400%): None</p>
-                <p class="tab">→ (200%): Ground, Rock, Water</p>
+                <p class="tab">→ (400%): <span class="400"></span></p>
+                <p class="tab">→ (200%): <span class="200"></span></p>
                 <br>
-                <img src="../assets/Shield.png" class="pic-to-left">
+                <img src="../assets/Extra/Shield.png" class="pic-to-left">
                 <p class="pic-to-left">Resistances:</p>
-                <p class="tab">→ (50%): Bug, Fairy, Fire, Grass, Ice, Steel</p>
-                <p class="tab">→ (25%): None</p>
+                <p class="tab">→ (50%): <span class="50"></span></p>
+                <p class="tab">→ (25%): <span class="25"></span></p>
                 <br>
-                <img src="../assets/Immunity.png" class="pic-to-left">
+                <img src="../assets/Extra/Immunity.png" class="pic-to-left">
                 <p class="pic-to-left">Immunities:</p>
-                <p class="tab">→ (0%): None</p>
+                <p class="tab">→ (0%): <span class="0"></span></p>
             </div>
 
             <!-- Allows you to search for other Pokémon in the wikipedia -->
@@ -77,29 +79,23 @@
             <!-- Base stats of the Pokémon -->
             <div class="base-stats">
                 <div class="stats">
-                    <p class="stat hp">HP: <span class="right">39</span></p>
-                    <p class="stat attack">Attack: <span class="right">52</span></p>
-                    <s>
-                        <p class="stat special-attack">Sp. Atk: <span class="right">43</span></p>
-                    </s>
-                    <p class="stat defense">Defense: <span class="right">60</span></p>
-                    <p class="stat special-defense">Sp. Def: <span class="right">50</span></p>
-                    <p class="stat speed">Speed: <span class="right">65</span></p>
-                    <p class="stat total">Total: <span class="right">309</span></p>
+                    <p class="stat hp">HP: <span class="right hp-value"></span></p>
+                    <p class="stat attack">Attack: <span class="right attack-value"></span></p>
+                    <p class="stat special-attack">Sp. Atk: <span class="right special-attack-value"></span></p>
+                    <p class="stat defense">Defense: <span class="right defense-value"></span></p>
+                    <p class="stat special-defense">Sp. Def: <span class="right special-defense-value"></span></p>
+                    <p class="stat speed">Speed: <span class="right speed-value"></span></p>
+                    <p class="stat total">Total: <span class="right total-value"></span></p>
                 </div>
                 <div class="extra">
-                    <div class="stat hp">
-                        <img src="../assets/Down.png" alt="">
-                    </div>
+                    <div class="stat hp"></div>
                     <div class="stat attack"></div>
                     <div class="stat special-attack"></div>
                     <div class="stat defense"></div>
                     <div class="stat special-defense"></div>
-                    <div class="stat speed">
-                        <img src="../assets/Up.png" alt="">
-                    </div>
+                    <div class="stat speed"></div>
                     <div class="stat total">
-                        <p>52</p>
+                        <p class="average-value"></p>
                     </div>
                 </div>
             </div>
@@ -115,57 +111,67 @@
                 </div>
                 <div id="content">
                     <div id="biome">
-                        <p>Mountains</p>
-                        <p>Mountain Edge</p>
-                        <p>Wooded Mountains</p>
-                        <p>Gravelly Mountains</p>
-                        <p>Gravelly Mountains+</p>
-                        <p>Ultra Rocky</p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
                     </div>
                     <div id="rarity">
-                        <p>5</p>
-                        <p>5</p>
-                        <p>5</p>
-                        <p>5</p>
-                        <p>5</p>
-                        <p>5</p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
                     </div>
                     <div id="time">
-                        <p>Day</p>
-                        <p>Day</p>
-                        <p>Day</p>
-                        <p>Day</p>
-                        <p>Day</p>
-                        <p>Day</p>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
                     <div id="location">
-                        <p>Land</p>
-                        <p>Land</p>
-                        <p>Land</p>
-                        <p>Land</p>
-                        <p>Land</p>
-                        <p>Land</p>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
                     </div>
                     <div id="weather">
-                        <p>Clear</p>
-                        <p>Clear</p>
-                        <p>Clear</p>
-                        <p>Clear</p>
-                        <p>Clear</p>
-                        <p>Clear</p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
                     </div>
                 </div>
             </div>
 
+            <div id="no-natural-spawning-available">
+                <p>&nbsp;&nbsp;No</p>
+                <p><span class="tab"></span>natural</p>
+                <p><span class="tab"><span class="tab"></span></span>spawning</p>
+                <p><span class="tab"><span class="tab"></span><span class="tab"></span></span>available</p>
+            </div>
             <div id="separate-bottom"></div>
 
             <!-- Buttons to go back/forward through the wikipedia -->
             <div id="bottom-menu">
-                <button class="goto button-text" id="go-back">← #003</button>
+                <button class="goto button-text" id="go-back">← #<span id="go-back-value"></span></button>
                 <button name="Switch" id="more-info"></button>
-                <button class="goto button-text" id="go-forward">#005 →</button>
+                <button class="goto button-text" id="go-forward">#<span id="go-forward-value"></span> →</button>
                 <hr>
             </div>
+        </div>
+
+        <div id="battle">
+            <!-- hi -->
         </div>
     </div>
 </body>

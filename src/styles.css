@@ -3,6 +3,11 @@
   src: url("../assets/Minecraftia.ttf");
 }
 
+@font-face {
+  font-family: "Marker";
+  src: url("../assets/Marker.ttf");
+}
+
 :root {
   --dark-background: rgb(14, 17, 23);
   --dark-section: rgb(50, 58, 70);
@@ -84,27 +89,27 @@ button:hover {
 }
 
 #menu-show {
-  background-image: url("../assets/Show_1.png");
+  background-image: url("../assets/Menu/Show_1.png");
 }
 
 #menu-show:hover {
-  background-image: url("../assets/Show_2.png");
+  background-image: url("../assets/Menu/Show_2.png");
 }
 
 #menu-minimize {
-  background-image: url("../assets/Minimize_1.png");
+  background-image: url("../assets/Menu/Minimize_1.png");
 }
 
 #menu-minimize:hover {
-  background-image: url("../assets/Minimize_2.png");
+  background-image: url("../assets/Menu/Minimize_2.png");
 }
 
 #menu-quit {
-  background-image: url("../assets/Quit_1.png");
+  background-image: url("../assets/Menu/Quit_1.png");
 }
 
 #menu-quit:hover {
-  background-image: url("../assets/Quit_2.png");
+  background-image: url("../assets/Menu/Quit_2.png");
 }
 
 #wiki {
@@ -114,6 +119,7 @@ button:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 10px;
+  height: 577px;
 }
 
 .pokecard {
@@ -140,6 +146,13 @@ button:hover {
   margin-bottom: 0;
   text-align: center;
   font-size: 18px;
+  display: inline-block;
+}
+
+.pokecard .legendary {
+  position: relative;
+  top: 5px;
+  height: 25px;
 }
 
 .pokecard .id {
@@ -209,7 +222,7 @@ button:hover {
 
 .pokecard .swap {
   background: transparent;
-  background-image: url("../assets/Swap.svg");
+  background-image: url("../assets/Extra/Swap.svg");
   -webkit-filter: invert(1);
           filter: invert(1);
   background-size: cover;
@@ -221,6 +234,7 @@ button:hover {
 }
 
 .types {
+  height: 300px;
   margin: 10px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -239,6 +253,11 @@ button:hover {
 
 .types .tab {
   margin-left: 34px;
+}
+
+.types p {
+  width: 526px;
+  overflow-wrap: break-word;
 }
 
 #search-bar {
@@ -326,10 +345,6 @@ button:hover {
 
 .base-stats .stats {
   width: 125px;
-}
-
-.base-stats .stats s {
-  color: black;
   text-decoration-thickness: 1.5px;
 }
 
@@ -414,34 +429,29 @@ button:hover {
   margin-left: 10px;
   width: 600px;
   border: 1px solid var(--dark-outline);
+  overflow: hidden;
 }
 
 #spawn #header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
 }
 
 #spawn #header #header-biome {
   background-color: #97bd84;
-  width: 280%;
 }
 
 #spawn #header #header-rarity {
   background-color: #c394c9;
-  width: 80%;
 }
 
 #spawn #header #header-time {
   background-color: #8ea9e9;
-  width: 90%;
 }
 
 #spawn #header #header-location {
@@ -461,7 +471,6 @@ button:hover {
           justify-content: center;
   border: 1px solid var(--dark-outline);
   height: 25px;
-  width: 100%;
   background-color: #c6c6a7;
   color: black;
 }
@@ -476,32 +485,44 @@ button:hover {
           flex-direction: row;
 }
 
-#spawn #content #biome {
-  width: 276%;
-}
-
 #spawn #content #biome p {
   background-color: #a7db8d;
-}
-
-#spawn #content #rarity {
-  width: 80.5%;
 }
 
 #spawn #content #rarity p {
   background-color: #d89fde;
 }
 
-#spawn #content #time {
-  width: 90%;
-}
-
-#spawn #content #time p {
+#spawn #content #time div {
   background-color: #9db7f5;
 }
 
-#spawn #content #location p {
+#spawn #content #location div {
   background-color: #f5ac78;
+}
+
+#spawn #content #time div,
+#spawn #content #location div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#spawn #content #time div img,
+#spawn #content #location div img {
+  height: 23px;
+  width: 23px;
+  padding: 1px;
 }
 
 #spawn #content #weather p {
@@ -516,16 +537,60 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
 }
 
-#spawn #content div p {
+#spawn #content div p,
+#spawn #content div div {
   border: 1px solid var(--dark-outline);
   height: 25px;
   padding-left: 5px;
   background-color: #c6c6a7;
   color: black;
   text-align: center;
+}
+
+#spawn #header-biome,
+#spawn #biome p {
+  width: 213px;
+}
+
+#spawn #header-rarity,
+#spawn #rarity p {
+  width: 65px;
+}
+
+#spawn #header-time,
+#spawn #time div {
+  width: 90px;
+}
+
+#spawn #header-location,
+#spawn #location div {
+  width: 150px;
+}
+
+#spawn #header-weather,
+#spawn #weather p {
+  width: 80px;
+}
+
+#no-natural-spawning-available {
+  position: absolute;
+  bottom: 160px;
+  right: 220px;
+  display: none;
+}
+
+#no-natural-spawning-available p {
+  font-family: "Marker", "Trattatello", "fantasy";
+  font-size: 24px;
+  color: rgba(186, 151, 245, 0.8);
+  -webkit-filter: drop-shadow(0.5px 0.5px rgba(0, 0, 0, 0.75));
+          filter: drop-shadow(0.5px 0.5px rgba(0, 0, 0, 0.75));
+}
+
+#no-natural-spawning-available .tab {
+  margin-left: 40px;
 }
 
 #separate-bottom {
@@ -572,14 +637,29 @@ button:hover {
   margin-left: auto;
 }
 
+.goto:hover {
+  background: #423e5c;
+}
+
 #more-info {
   border: none;
   background: transparent;
   background-size: cover;
-  background-image: url("../assets/Switch_Off.png");
+  background-image: url("../assets/Extra/Switch_Off.png");
   width: 60px;
   height: 60px;
   margin-left: auto;
   position: relative;
+}
+
+#battle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px;
+  height: 577px;
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */
