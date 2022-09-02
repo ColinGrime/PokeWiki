@@ -1,9 +1,9 @@
 {
     "name": "poke-wiki",
     "version": "1.0.0",
-    "description": "Interactive wikipedia page for Pokémon",
+    "description": "Interactive desktop application for Pokémon-related tasks.",
     "main": "main.js",
-    "author": "ColinGrime",
+    "author": "Colin Grimes",
     "scripts": {
         "start": "electron ."
     },
