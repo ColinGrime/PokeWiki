@@ -9,8 +9,11 @@
     },
     "dependencies": {
         "@electron/remote": "^2.0.8",
+        "jimp": "^0.16.1",
         "jquery": "^3.6.1",
-        "pokemon": "^2.3.3"
+        "pokemon": "^2.3.3",
+        "socket.io": "^4.5.1",
+        "tesseract.js": "^3.0.2"
     },
     "devDependencies": {
         "electron": "^20.0.3",
