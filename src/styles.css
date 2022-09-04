@@ -485,8 +485,36 @@ button:hover {
           flex-direction: row;
 }
 
-#spawn #content #biome p {
+#spawn #content #biome div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #a7db8d;
+}
+
+#spawn #content #biome div p {
+  display: inline-block;
+  border: none;
+  margin-top: 2px;
+  margin-right: 5px;
+}
+
+#spawn #content #biome div img {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  padding: 1px;
+  margin-bottom: 1px;
 }
 
 #spawn #content #rarity p {
@@ -544,13 +572,12 @@ button:hover {
   border: 1px solid var(--dark-outline);
   height: 25px;
   padding-left: 5px;
-  background-color: #c6c6a7;
   color: black;
   text-align: center;
 }
 
 #spawn #header-biome,
-#spawn #biome p {
+#spawn #biome div {
   width: 213px;
 }
 
@@ -575,9 +602,9 @@ button:hover {
 }
 
 #no-natural-spawning-available {
-  position: absolute;
-  bottom: 160px;
-  right: 220px;
+  position: relative;
+  top: 15px;
+  left: 160px;
   display: none;
 }
 

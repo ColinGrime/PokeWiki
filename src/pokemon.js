@@ -173,6 +173,7 @@ class Pokemon {
                 continue;
             }
 
+            // Times.
             let times = ['━']
             if ('condition' in spawn && 'times' in spawn['condition']) {
                 times = spawn['condition']['times']
@@ -180,13 +181,19 @@ class Pokemon {
 
             // Account for weather multipliers.
             const weathers = [{ 'rarity': 1, 'weather': ['━'] }]
-            if ('rarityMultipliers' in spawn) {
+            if ('rarityMultipliers' in spawn && 'condition' in spawn['rarityMultipliers'] && 'weathers' in spawn['rarityMultipliers']['condition']) {
                 for (const multipliers of spawn['rarityMultipliers']) {
                     weathers.push({
                         'rarity': multipliers['multiplier'],
                         'weather': multipliers['condition']['weathers']
                     })
                 }
+            }
+
+            // Custom forms.
+            let customForm = false
+            if ('form' in spawn['spec'] && spawn['spec']['form'] !== 0) {
+                customForm = true
             }
 
             // Unique row per biome if possible.
@@ -202,7 +209,8 @@ class Pokemon {
                             'Rarity': Math.round(rarity * weather['rarity'] * 100) / 100,
                             'Times': times,
                             'Locations': locations,
-                            'Weathers': weather['weather']
+                            'Weathers': weather['weather'],
+                            'CustomForm': customForm
                         })
                     }
                 }
@@ -212,7 +220,8 @@ class Pokemon {
                     'Rarity': rarity,
                     'Times': times,
                     'Locations': locations,
-                    'Weathers': '━'
+                    'Weathers': '━',
+                    'CustomForm': customForm
                 })
             }
         }

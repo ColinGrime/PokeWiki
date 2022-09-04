@@ -183,11 +183,27 @@ function displayPokemon(name) {
     $('#content div div').each((i, e) => e.innerHTML = '')
     const spawnInfo = poke.spawnInfo
     for (let i = 0; i < spawnInfo.length; i++) {
-        $(`#biome p:eq(${i})`).text(spawnInfo[i].Biome)
+        setupBiomes(spawnInfo[i].Biome, spawnInfo[i].CustomForm, i)
         $(`#rarity p:eq(${i})`).text(spawnInfo[i].Rarity)
         $(`#weather p:eq(${i})`).text(spawnInfo[i].Weathers)
         addEmojis(spawnInfo[i].Times, 'time', i)
         addEmojis(spawnInfo[i].Locations, 'location', i)
+    }
+
+    function setupBiomes(biome, hasCustomForm, index) {
+        let html = `<p>${biome}</p>`
+
+        // Check for custom skin.
+        if (hasCustomForm) {
+            if (biome === '━') {
+                html = '<img src="../assets/extra/Skin.png">'
+            } else {
+                html += '<img src="../assets/extra/Skin.png">'
+            }
+        }
+
+        // Set HTML.
+        $(`#biome div:eq(${index})`).html(html)
     }
 
     function addEmojis(section, name, index) {
