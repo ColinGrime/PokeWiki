@@ -1,10 +1,11 @@
-const fs = require('fs')
-const pokemon = require('pokemon')
+import fs from 'fs';
+import pokemon from 'pokemon';
 const pokemonNames = pokemon.all()
-const legendary = require('../assets/data/legendary.json')['Legendary']
-const typeChart = require('../assets/data/type-chart.json')
-const biomesIgnore = require('../assets/data/biomes-ignore.json')
+import legendary from '../assets/data/legendary.json';
+import typeChart from '../assets/data/type-chart.json';
+import biomesIgnore from '../assets/data/biomes-ignore.json';
 const pokemonCache = new Map()
+const pokeFuzz = require('fuzzyset')(pokemonNames)
 
 function getFullId(name) {
     let id = pokemon.getId(name)
@@ -38,6 +39,8 @@ class Pokemon {
     isLegendary
     #statsJson
     #spawnInfoJson
+    #moveSet
+    #health
 
     constructor(name) {
         this.name = name
@@ -51,8 +54,8 @@ class Pokemon {
             this.stats = this.#getStats()
         }
 
-        if (fs.existsSync(`assets/data/standard/${this.formalName}.set.json`)) {
-            this.#spawnInfoJson = require(`../assets/data/standard/${this.formalName}.set.json`)
+        if (fs.existsSync(`assets/data/spawns/${this.formalName}.set.json`)) {
+            this.#spawnInfoJson = require(`../assets/data/spawns/${this.formalName}.set.json`)
             this.spawnInfo = this.#getSpawnInfo()
         } else {
             this.spawnInfo = []
@@ -230,6 +233,66 @@ class Pokemon {
         return spawnInfo.slice(0, 6)
     }
 
+    getMoves() {
+        if (this.#moveSet !== undefined) {
+            return this.#moveSet
+        }
+
+        const eggMoves = getMoves(this.#statsJson, 'eggMoves')
+        const transferMoves = getMoves(this.#statsJson, 'transferMoves')
+        const hmMoves = getMoves(this.#statsJson, 'hmMoves')
+        const trMoves = getMoves(this.#statsJson, 'trMoves')
+        const tmMoves8 = getMoves(this.#statsJson, 'tmMoves8')
+        const tmMoves7 = getMoves(this.#statsJson, 'tmMoves7')
+        const tmMoves6 = getMoves(this.#statsJson, 'tmMoves6')
+        const tmMoves5 = getMoves(this.#statsJson, 'tmMoves5')
+        const tmMoves4 = getMoves(this.#statsJson, 'tmMoves4')
+        const tmMoves3 = getMoves(this.#statsJson, 'tmMoves3')
+        const tmMoves2 = getMoves(this.#statsJson, 'tmMoves2')
+        const tmMoves1 = getMoves(this.#statsJson, 'tmMoves1')
+        const levelUpMoves = getLevelUpMoves(this.#statsJson)
+
+        function getMoves(statsJson, name) {
+            return name in statsJson ? statsJson[name] : []
+        }
+
+        function getLevelUpMoves(statsJson) {
+            if (!('levelUpMoves' in statsJson)) {
+                return
+            }
+
+            let arr = []
+            for (const level in statsJson['levelUpMoves']) {
+                arr = arr.concat(statsJson['levelUpMoves'][level])
+            }
+            return arr
+        }
+
+        this.#moveSet = [...new Set([...eggMoves, ...transferMoves, ...hmMoves, 
+            ...trMoves, ...tmMoves8, ...tmMoves7, 
+            ...tmMoves6, ...tmMoves5, ...tmMoves4, 
+            ...tmMoves3, ...tmMoves2, ...tmMoves1, 
+            ...levelUpMoves])]
+            
+        return this.#moveSet
+    }
+
+    setMoves(moveSet) {
+        this.#moveSet = moveSet
+    }
+
+    getHealth() {
+        if (this.#health !== undefined) {
+            return this.#health
+        }
+
+        return Math.floor(0.01 * (2 * this.stats['HP'] + 31 + Math.floor(0.25 * 252)) * 100) + 100 + 10
+    }
+
+    setHealth(health) {
+        this.#health = health
+    }
+
     getBack() {
         const back = parseInt(this.id) - 1
         return back === 0 ? '905' : addPadding(back)
@@ -241,7 +304,7 @@ class Pokemon {
     }
 }
 
-function getByName(name) {
+export function getByName(name) {
     if (name === null || name === undefined || typeof name !== 'string') {
         return null
     }
@@ -270,21 +333,24 @@ function getByName(name) {
     return pokemon
 }
 
-function getName(id) {
+export function getName(id) {
     return pokemon.getName(id)
 }
 
-function autoCompleteName(str) {
-    if (str === '') {
+export function autoCompleteName(str) {
+    if (typeof str !== 'string' || str === '') {
         return []
     }
 
-    const names = pokemonNames.filter(p => p.toLowerCase().startsWith(str.toLowerCase()))
-    if (names.length > 5) {
-        return names.slice(0, 5)
+    const names = pokeFuzz.get(str)
+    if (names === null || names === undefined) {
+        return []
     }
 
-    return names
-}
+    const arr = []
+    for (const name of names) {
+        arr.push(name[1])
+    }
 
-module.exports = { getByName, getName, autoCompleteName } 
+    return arr.slice(0, 5)
+}

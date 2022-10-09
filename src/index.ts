@@ -1,5 +1,5 @@
-const { BrowserWindow } = require('@electron/remote')
-window.$ = window.jQuery = require('jquery')
+import { BrowserWindow } from '@electron/remote';
+import $ from 'jquery';
 
 // Add pokemon.js file for all Pokémon-related tasks.
 const pokemon = require('./pokemon.js')
@@ -7,9 +7,13 @@ const pokemon = require('./pokemon.js')
 // Text replacer.
 const textReplacer = require('../assets/data/text-replacer.json')
 
+// Enabling DEBUG_MODE will print additional debug messages.
+function DEBUG_MODE() {
+    return false
+}
+
 $(() => {
-    currentWindow = BrowserWindow.getAllWindows()
-    currentWindow = currentWindow[0]
+    const currentWindow = BrowserWindow.getAllWindows()[0];
 
     // Display the 1st Pokémon.
     displayPokemonById(1)
@@ -117,11 +121,11 @@ function displayPokemon(name) {
 
     // Get the Pokemon object.
     const poke = pokemon.getByName(name)
-    name = poke.name
     if (poke === null || poke === undefined || poke.stats === undefined) {
         return
     }
 
+    name = poke.name
     $('.name').text(name)
     $('.id-num').text(poke.id)
     $('.pokemon').attr('src', `../assets/Pokemon/${poke.formalName}.png`)

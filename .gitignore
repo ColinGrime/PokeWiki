@@ -120,6 +120,7 @@ run/
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
 
-# OCR stuff
-eng.traineddata
-battle
+# Compiled files.
+**/*.js
+**/*.css
+**/*.css.map
