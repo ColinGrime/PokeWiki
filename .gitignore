@@ -124,6 +124,3 @@ run/
 **/*.js
 **/*.css
 **/*.css.map
-
-# Server
-src/server.ts
