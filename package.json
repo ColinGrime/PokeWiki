@@ -1,22 +1,26 @@
 {
     "name": "poke-wiki",
     "version": "1.0.0",
-    "description": "Interactive desktop application for Pokémon-related tasks.",
+    "description": "Pokémon Wikipedia Desktop Application",
     "main": "main.js",
     "author": "Colin Grimes",
     "scripts": {
-        "start": "electron ."
+        "start": "./start.sh"
     },
     "dependencies": {
         "@electron/remote": "^2.0.8",
-        "jimp": "^0.16.1",
+        "fuzzyset": "^1.0.7",
         "jquery": "^3.6.1",
         "pokemon": "^2.3.3",
-        "socket.io": "^4.5.1",
-        "tesseract.js": "^3.0.2"
+        "socket.io": "^4.5.2"
     },
     "devDependencies": {
+        "@types/fuzzyset": "^1.0.4",
+        "@types/jquery": "^3.5.14",
+        "@typescript-eslint/eslint-plugin": "^5.39.0",
+        "@typescript-eslint/parser": "^5.39.0",
         "electron": "^20.0.3",
-        "electron-packager": "^16.0.0"
+        "electron-packager": "^16.0.0",
+        "eslint": "^8.25.0"
     }
 }
