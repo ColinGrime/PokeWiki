@@ -17,3 +17,4 @@ This application allows you to quickly view Pokémon stats and spawn information
 - Biomes: Biome, Rarity, Time, Location, Weather.
 
 ## Showcase
+![gif of application](/assets/Showcase.gif)
